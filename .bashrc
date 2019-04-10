@@ -5,9 +5,16 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# User specific environment
+## USER SCECIFIC ENVIRONMENTS
 PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 export PATH
+# Type of repository (default git)
+REPO_TYPE="git"
+export REPO_TYPE
+# change type of repository from git to subversion and vice versa
+alias svnRepo='REPO_TYPE="svn"; export REPO_TYPE'
+alias gitRepo='REPO_TYPE="git"; export REPO_TYPE'
+
 
 ## User specific aliases and functions
 ## a lot configuration is from following articles:
@@ -27,7 +34,6 @@ alias null='/dev/null'
 alias o='gvim'
 
 
-
 ## DIRECTORIES
 alias home='cd ~'
 alias root='cd /'
@@ -42,17 +48,18 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
 
+## GIT AND SVN
 
-## GIT
+
 alias g='git'
-alias st='git status'
-alias com='git commit -m'
+alias st='$REPO_TYPE status'
+alias com='$REPO_TYPE commit -m'
 alias clone='git clone'
 alias sth='git stash'
-alias lg='git log'
+alias lg='$REPO_TYPE log'
 alias u='git add -u'
 alias all='git add .'
-
+alias dif='$REO_TYPE diff | gvim -'
 
 
 ## PROGRAM ALIASES
@@ -64,7 +71,6 @@ alias bashrc='gvim ~/.bash_profile'
 alias loadbash='source ~/.bash_profile'
 # Ctags.
 alias gentags='ctags -R .'
-
 
 
 ## UNIX COMMAND OPTIONS
