@@ -15,6 +15,9 @@ export REPO_TYPE
 alias svnRepo='REPO_TYPE="svn"; export REPO_TYPE'
 alias gitRepo='REPO_TYPE="git"; export REPO_TYPE'
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 ## User specific aliases and functions
 ## a lot configuration is from following articles:
