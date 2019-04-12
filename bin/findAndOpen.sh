@@ -1,3 +1,6 @@
 #!/bin/bash
 
-eval "find $2 -name $1 -exec gvim {} \;"
+WHAT=$1
+WHERE="."
+
+eval "find $WHERE -name $WHAT -exec gvim {} \;"
