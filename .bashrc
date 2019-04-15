@@ -76,7 +76,7 @@ alias gentags='ctags -R .'
 
 ## UNIX COMMAND OPTIONS
 # Let there be color in grep!
-export GREP_OPTIONS=' — color=auto'
+export GREP_OPTIONS='--color=auto'
 # Set gvim as my default editor
 export EDITOR=gvim
 ## Colorize the ls output ##
