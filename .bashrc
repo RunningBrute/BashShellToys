@@ -11,6 +11,7 @@ export PATH
 # Type of repository (default git)
 REPO_TYPE="git"
 export REPO_TYPE
+export SVN_EDITOR="gvim"
 # change type of repository from git to subversion and vice versa
 alias svnRepo='REPO_TYPE="svn"; export REPO_TYPE'
 alias gitRepo='REPO_TYPE="git"; export REPO_TYPE'
