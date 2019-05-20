@@ -77,7 +77,7 @@ alias gentags='ctags -R .'
 
 ## UNIX COMMAND OPTIONS
 # Let there be color in grep!
-export GREP_OPTIONS='--color=auto'
+#export GREP_OPTIONS='--color=auto'
 # Set gvim as my default editor
 export EDITOR=gvim
 ## Colorize the ls output ##
@@ -88,6 +88,7 @@ alias la='ls -a'
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
 ## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
+alias grep='grep -nri --color=auto'
+alias gr='grep -nri --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
